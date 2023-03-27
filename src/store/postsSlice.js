@@ -20,7 +20,7 @@ const postState = createSlice({
 
 export const getTPostsync = (data) => async (dispatch) => {
   try{
-    const response = await axios.get('http://localhost:5000/posts');
+    const response = await axios.get('https://my-json-server.typicode.com/jyoons/react-blog/posts');
     dispatch(getPosts(response.data));
   }catch(error){
     console.log('error', error);
@@ -30,7 +30,7 @@ export const getTPostsync = (data) => async (dispatch) => {
 export const addPostAsync = (data) => async (dispatch) => {
   try {
     // console.log(data);
-    const response = await axios.post('http://localhost:5000/posts', data);
+    const response = await axios.post('https://my-json-server.typicode.com/jyoons/react-blog/posts', data);
     // console.log(response);
     dispatch(addPosts(response.data));
   } catch (err) {
@@ -85,3 +85,6 @@ export default postState.reducer;
 // export const { addTodo, getTodo } = todoSlide.actions;
 // export const showTodo = (state) => state.todo.data;
 // export default todoSlide.reducer;
+
+// https://jyoons.github.io/react-blog/db/data.json
+// https://my-json-server.typicode.com/jyoons/react-blog/db/data

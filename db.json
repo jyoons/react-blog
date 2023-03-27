@@ -2,18 +2,21 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "title1",
+      "date": "2022-12-29",
+      "contents": "1내용 내용 내용 내용 내용 내용"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "title2",
+      "date": "2022-12-32",
+      "contents": "2내용 내용 내용 내용 내용 내용"
+    },
+    {
+      "id": 3,
+      "title": "title3",
+      "date": "2022-12-31",
+      "contents": "3내용 내용 내용 내용 내용 내용"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

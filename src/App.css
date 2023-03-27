@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,35 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  text-align: left;
+}
+
+.contents {
+  position: relative;
+  top: 60px;
+}
+
+.btn-wrap {
+  text-align: center;
+}
+
+.btn {
+  margin: 0 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFF;
+  background: #479f76;
+  border-radius: 4px;
+}
+
+.btn.btn-primary {
+  background: #479f76;
+}
+
+.btn.btn-secondary {
+  background: #6c757d;
 }

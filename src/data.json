@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "title1",
+      "date": "2022-12-29",
+      "contents": "1내용 내용 내용 내용 내용 내용"
+    },
+    {
+      "id": 2,
+      "title": "title2",
+      "date": "2022-12-32",
+      "contents": "2내용 내용 내용 내용 내용 내용"
+    },
+    {
+      "id": 3,
+      "title": "title3",
+      "date": "2022-12-31",
+      "contents": "3내용 내용 내용 내용 내용 내용"
+    },
+    {
+      "id": 4,
+      "title": "ㅈ[ㅔ목",
+      "date": "2023-03-24",
+      "contents": "내용"
+    },
+    {
+      "title": "sd",
+      "date": "2023-03-24:08",
+      "contents": "sdfsvcx",
+      "id": 5
+    },
+    {
+      "title": "sd",
+      "date": "2023-03-24:12",
+      "contents": "sdfsvcx",
+      "id": 6
+    },
+    {
+      "title": "sd",
+      "date": "2023-03-24:12",
+      "contents": "sdfsvcx",
+      "id": 7
+    },
+    {
+      "title": "sd",
+      "date": "2023-03-24:13",
+      "contents": "sdfsvcx",
+      "id": 8
+    },
+    {
+      "title": "sd",
+      "date": "2023-03-24:13",
+      "contents": "sdfsvcx",
+      "id": 9
+    },
+    {
+      "title": "sd",
+      "date": "2023-03-24:13",
+      "contents": "sdfsvcx",
+      "id": 10
+    },
+    {
+      "title": "sd",
+      "date": "2023-03-24:13",
+      "contents": "sdfsvcx",
+      "id": 11
+    }
+  ]
+}

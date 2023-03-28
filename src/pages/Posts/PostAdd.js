@@ -1,12 +1,15 @@
+import axios from 'axios';
 import moment from 'moment/moment';
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 import { addPostAsync } from '../../store/postsSlice' 
+import { getTPostsync } from '../../store/postsSlice' 
 
 export default function PostAdd() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const postState = useSelector((state) => state.postState.data[0]);
   const [inputs, setInputs] = useState({
     input1:'',
     textarea1 : ''
@@ -16,6 +19,7 @@ export default function PostAdd() {
     const { value, name } = e.target;
     const newInputs ={...inputs, [name]: value }
     setInputs(newInputs)
+
   }
   const handleEvent = (e) =>{
     e.preventDefault();
@@ -24,9 +28,9 @@ export default function PostAdd() {
       date :moment().format('YYYY-MM-DD:ss'),
       contents :inputs.textarea1
     }
-    dispatch(addPostAsync(newPost));
-    // navigate('/Posts/PostList')
+    dispatch(addPostAsync(newPost)); 
   }
+
   return (
     <div>
       <form className="dataList">

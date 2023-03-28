@@ -9,6 +9,7 @@ export default function PostDetail() {
   const navigate = useNavigate();
   useEffect(() => {
     dispatch(getTPostsync());
+    console.log(postState)
   }, [dispatch])
   if(postState){
     return (

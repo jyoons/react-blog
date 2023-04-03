@@ -1,15 +1,13 @@
-import axios from 'axios';
-import moment from 'moment/moment';
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+
+import React, {useState } from 'react'
+import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom'
-import { addPostAsync } from '../../store/postsSlice' 
-import { getTPostsync } from '../../store/postsSlice' 
+import Modal from '../../Modal/Modal';
+import { modalOpen } from '../../store/modalStateSlice'
 
 export default function PostAdd() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const postState = useSelector((state) => state.postState.data[0]);
   const [inputs, setInputs] = useState({
     input1:'',
     textarea1 : ''
@@ -21,14 +19,28 @@ export default function PostAdd() {
     setInputs(newInputs)
 
   }
+  // const modalState = useSelector((state) => state.modalState.isOpen);
   const handleEvent = (e) =>{
     e.preventDefault();
-    let newPost = {
-      title: inputs.input1,
-      date :moment().format('YYYY-MM-DD:ss'),
-      contents :inputs.textarea1
-    }
-    dispatch(addPostAsync(newPost)); 
+    dispatch(modalOpen());
+    // let newPost = {
+    //   title: inputs.input1,
+    //   date :moment().format('YYYY-MM-DD:ss'),
+    //   contents :inputs.textarea1
+    // }
+    // dispatch(addPostAsync(newPost));
+  }
+  const modalCont = () =>{
+    return(
+      <div>
+        <dl className="data-list">
+          <dt>제목</dt>
+          <dd>{inputs.input1}</dd>
+          <dt>내용</dt>
+          <dd>{inputs.textarea1}</dd>
+        </dl>
+      </div>
+    )
   }
 
   return (
@@ -58,6 +70,7 @@ export default function PostAdd() {
           <button className="btn btn-secondary" onClick={() => navigate('/Posts/PostList')}>취소</button>
         </div>
       </form>
+      <Modal content={modalCont()} title='게시글 등록 확인' postSubmit={inputs}></Modal>
     </div>
   )
 }

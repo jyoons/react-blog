@@ -67,3 +67,32 @@
 .btn.btn-secondary {
   background: #6c757d;
 }
+
+.data-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+}
+
+.data-list>dt {
+  width: 20%;
+  flex: 0 0 20%;
+  padding: 10px 0;
+}
+
+.data-list>dd {
+  position: relative;
+  width: 80%;
+  flex: 0 0 80%;
+  padding: 10px 0 10px 10px;
+}
+
+.data-list>dd:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 1px;
+  height: calc(100% - 20px);
+  background: #000;
+}

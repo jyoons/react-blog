@@ -24,9 +24,9 @@ export default function Router() {
         <Route path="Menu3" element={<Menu3/>}></Route>
         <Route path="Menu3/Menu3Dep1" element={<Menu3Dep1/>}></Route>
         <Route path="/Posts/PostList" element={<PostList/>}></Route>
-        <Route path="/Posts/:postDetailIdx" element={<PostDetail/>}></Route>
+        <Route path="/Posts/PostDetail/:postid" element={<PostDetail/>}></Route>
         <Route path="/Posts/PostAdd" element={<PostAdd/>}></Route>
-        <Route path="/Posts/PostEdit" element={<PostEdit/>}></Route>
+        <Route path="/Posts/PostEdit/:postid" element={<PostEdit/>}></Route>
       </Route>
   </Routes>
   )

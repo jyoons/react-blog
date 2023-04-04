@@ -17,7 +17,6 @@ export default function PostAdd() {
     const { value, name } = e.target;
     const newInputs ={...inputs, [name]: value }
     setInputs(newInputs)
-
   }
   // const modalState = useSelector((state) => state.modalState.isOpen);
   const handleEvent = (e) =>{
